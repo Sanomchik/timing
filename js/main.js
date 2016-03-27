@@ -33,17 +33,29 @@ $(document).ready(function () {
   case 6:
   day = "saturday";
   break;
-} $.getJSON('js/data.json', function (data) {
+} 
+
+function refresh(){
+$.getJSON('js/data.json', function (data) {
   if (data.timing[currentWeek][day] == undefined){
-    console.log('VUHODNOY');
+    $(".row").append("<div class=\"col-xs-12 item\"><h1>Неужели выходной ??</h1></div>");
+   
   }
   else{
    var timing = data.timing[currentWeek][day].map(function (item) {
-    console.log(item.name);
-    console.log(item.time);
-    $(".row").append("<div class=\"col-xs-12\">"+item.name+"</div>");
+    $(".row").append("<div class=\"col-xs-12 item "+item.color+"\"><div class=\"col-xs-3 side\"><h5>"+item.time+"</h5></div><div class=\"col-xs-6\"><h5>"+item.name+"</h5><h6>"+item.teacher+"</h6></div><div class=\"col-xs-3 side\"><h5>"+item.cab+"</h5></div>");
+    
   });
  }
  
 });
+}
+$('.refresh').click(function setDat(){
+  day = 'tuesday'
+  $('.row').empty();
+  refresh();
+  
+  
+});
+refresh();
 });
