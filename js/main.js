@@ -4,7 +4,7 @@ $(document).ready(function () {
   var today = new Date(year, month, 0).getTime(); 
   var now = new Date().getTime(); 
   var week = Math.round((now - today) / (1000 * 60 * 60 * 24 * 7)); 
-  if (week % 2) { 
+  if (week+1 % 2) { 
    alert("Текущая неделя - чётная"); 
  } else { 
    alert("Текущая неделя - нечётная"); 
