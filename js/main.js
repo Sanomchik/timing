@@ -41,7 +41,7 @@ $(document).ready(function () {
    var timing = data.timing[currentWeek][day].map(function (item) {
     console.log(item.name);
     console.log(item.time);
-    $('<div class="col-xs-12">').text(item.name).prependTo('.row');
+    $(".row").append("<div class=\"col-xs-12\">"+item.name+"</div>");
   });
  }
  
