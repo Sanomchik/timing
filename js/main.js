@@ -1,3 +1,4 @@
+var a 
 $(document).ready(function () {
   $('#get-data').click(function () {
     var showData = $('#show-data');
@@ -7,6 +8,7 @@ $(document).ready(function () {
       console.log(data.timing.first_week.monday);
       console.log(data.timing.first_week);
       console.log(data.timing);
+      a = data
 
       var timing = data.timing.first_week.monday.first.map(function (item) {
         return item.name + ': ' + item.time;
