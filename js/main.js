@@ -23,10 +23,16 @@ $(document).ready(function () {
   day = "saturday";
   break;
 } $.getJSON('js/data.json', function (data) {
-  var timing = data.timing.first_week[day].map(function (item) {
+  if (data.timing.first_week[day] == undefined){
+    alert('sadsad');
+  }
+  else{
+     var timing = data.timing.first_week[day].map(function (item) {
     console.log(item.name);
     console.log(item.time);
     return item.name + ': ' + item.time;
   });
+  }
+ 
 });
 });
