@@ -8,13 +8,13 @@ $(document).ready(function () {
       console.log(data.timing.first_week.monday);
       console.log(data.timing.first_week);
       console.log(data.timing);
-      return a = data
 
       var timing = data.timing.first_week.map(function (item) {
-        return item.monday.first.name + ': ' + item.monday.first.time;
         console.log(item.monday.first.name);
         console.log(item.monday.first.time);
+        return item.monday.first.name + ': ' + item.monday.first.time;
       });
+      return a = data
 
       showData.empty();
 
