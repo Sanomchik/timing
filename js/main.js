@@ -9,7 +9,7 @@ $(document).ready(function () {
       console.log(data.timing.first_week);
       console.log(data.timing);
 
-      var timing = data.timing.first_week.monday.first.map(function (item) {
+      var timing = data.timing.first_week.monday.map(function (item) {
         console.log(item.name);
         console.log(item.time);
         return item.name + ': ' + item.time;
