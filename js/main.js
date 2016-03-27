@@ -6,7 +6,7 @@ $(document).ready(function () {
       console.log(data);
 
       var items = data.items.map(function (week) {
-        return week.first_week + ': ' + week.first_week.monday;
+        return week.first_week.monday.first.cab + ': ' + week.first_week.monday.first.name;
       });
 
       showData.empty();
