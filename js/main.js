@@ -1,9 +1,29 @@
 $(document).ready(function () {
- var d = new Date();
- var day = d.getDay();
-var a = 'monday'
- $.getJSON('js/data.json', function (data) {
-  var timing = data.timing.first_week[a].map(function (item) {
+ var day
+ switch (new Date().getDay()) {
+  case 0:
+  day = "sunday";
+  break;
+  case 1:
+  day = "monday";
+  break;
+  case 2:
+  day = "tuesday";
+  break;
+  case 3:
+  day = "wednesday";
+  break;
+  case 4:
+  day = "thursday";
+  break;
+  case 5:
+  day = "friday";
+  break;
+  case 6:
+  day = "saturday";
+  break;
+} $.getJSON('js/data.json', function (data) {
+  var timing = data.timing.first_week[day].map(function (item) {
     console.log(item.name);
     console.log(item.time);
     return item.name + ': ' + item.time;
