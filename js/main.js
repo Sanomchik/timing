@@ -5,8 +5,8 @@ $(document).ready(function () {
     $.getJSON('data.json', function (data) {
       console.log(data);
 
-      var items = data.items.map(function (item) {
-        return item.key + ': ' + item.value;
+      var items = data.items.map(function (week) {
+        return week.first_week + ': ' + week.first_week.monday;
       });
 
       showData.empty();

@@ -1,19 +1,38 @@
 {
-  "items": [
+  "week": [
+    {
+      "first_week": [
+    {
+       "monday": [
     {
       "key": "First",
       "value": 100
-    },{
-      "key": "Second",
-      "value": false
-    },{
-      "key": "Last",
-      "value": "Mixed"
+    }
+  ], "tue": [
+    {
+      "key": "First",
+      "value": 100
+    }
+  ]
     }
   ],
-  "obj": {
-    "number": 1.2345e-6,
-    "enabled": true
-  },
-  "message": "Strings have to be in double-quotes."
+    }
+    {
+      "second_week": [
+    {
+       "monday": [
+    {
+      "key": "First",
+      "value": 100
+    }
+  ], "tue": [
+    {
+      "key": "First",
+      "value": 100
+    }
+  ]
+    }
+  ],
+    }
+  ]
 }
