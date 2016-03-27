@@ -6,9 +6,9 @@ $(document).ready(function () {
   var week = Math.round((now - today) / (1000 * 60 * 60 * 24 * 7)); 
   var currentWeek;
   if (week+1 % 2) { 
-   currentWeek = first_week
+   currentWeek = 'first_week';
  } else { 
-   currentWeek = ssecond_week 
+   currentWeek = 'second_week';
  }
  var day
  switch (new Date().getDay()) {
