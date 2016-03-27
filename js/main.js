@@ -12,6 +12,8 @@ $(document).ready(function () {
 
       var timing = data.timing.first_week.map(function (item) {
         return item.monday.first.name + ': ' + item.monday.first.time;
+        console.log(item.monday.first.name);
+        console.log(item.monday.first.time);
       });
 
       showData.empty();
