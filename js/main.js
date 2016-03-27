@@ -6,7 +6,7 @@ $(document).ready(function () {
   var week = Math.round((now - today) / (1000 * 60 * 60 * 24 * 7)); 
   var mydata
   if (week+1 % 2) { 
-   mydata = mydata
+   mydata = timing.first_week
  } else { 
    mydata = timing.second_week
  }
