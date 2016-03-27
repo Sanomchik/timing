@@ -13,7 +13,7 @@ $(document).ready(function () {
  var day
  switch (new Date().getDay()) {
   case 0:
-  day = "sunday";
+  day = "monday";// sunday
   break;
   case 1:
   day = "monday";
