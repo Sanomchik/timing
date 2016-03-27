@@ -2,7 +2,7 @@ $(document).ready(function () {
   $('#get-data').click(function () {
     var showData = $('#show-data');
 
-    $.getJSON('data.json', function (data) {
+    $.getJSON('js/data.json', function (data) {
       console.log(data);
 
       var items = data.items.map(function (week) {
