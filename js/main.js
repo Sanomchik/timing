@@ -21,8 +21,8 @@ $(document).ready(function () {
 
     weekNumber = Math.floor((timeToDays(ts - yearStart) + 1) / 7);
 
-    return weekNumber;
     console.log(weekNumber);
+    return weekNumber;
   }
   var day
   switch (new Date().getDay()) {
