@@ -4,11 +4,10 @@ $(document).ready(function () {
   var today = new Date(year, month, 0).getTime(); 
   var now = new Date().getTime(); 
   var week = Math.round((now - today) / (1000 * 60 * 60 * 24 * 7)); 
-  var mydata
   if (week+1 % 2) { 
-   mydata = timing.first_week
+   alert("Текущая неделя - чётная"); 
  } else { 
-   mydata = timing.second_week
+   alert("Текущая неделя - нечётная"); 
  }
  var day
  switch (new Date().getDay()) {
@@ -34,11 +33,11 @@ $(document).ready(function () {
   day = "saturday";
   break;
 } $.getJSON('js/data.json', function (data) {
-  if (data.mydata[day] == undefined){
+  if (data.timing[first_week][day] == undefined){
     console.log('VUHODNOY');
   }
   else{
-   var timing = data.mydata[day].map(function (item) {
+   var timing = data.timing.first_week[day].map(function (item) {
     console.log(item.name);
     console.log(item.time);
     return item.name + ': ' + item.time;
