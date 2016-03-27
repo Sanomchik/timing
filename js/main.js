@@ -3,7 +3,7 @@ $(document).ready(function () {
   $('#get-data').click(function () {
     var showData = $('#show-data');
 
-    $.getJSON('js/first.json', function (data) {
+    $.getJSON('js/data.json', function (data) {
       console.log(data.timing.first_week.monday);
       console.log(data.timing.first_week);
       console.log(data.timing);
