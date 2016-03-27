@@ -2,7 +2,7 @@ $(document).ready(function () {
  var day
  switch (new Date().getDay()) {
   case 0:
-  day = "sunday";
+  day = "monday";
   break;
   case 1:
   day = "monday";
@@ -24,7 +24,7 @@ $(document).ready(function () {
   break;
 } $.getJSON('js/data.json', function (data) {
   if (data.timing.first_week[day] == undefined){
-    alert('sadsad');
+    console.log('VUHODNOY');
   }
   else{
      var timing = data.timing.first_week[day].map(function (item) {
