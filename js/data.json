@@ -38,6 +38,75 @@
           "teacher": "доц. Череднiченко Т.В",
           "color": "pink",
           "cab": "?"
+        },
+        "third": {
+          "name": "Л Гроші та кредит",
+          "time": "2",
+          "teacher": "доц. Коптюх О.Г",
+          "color": "yellow",
+          "cab": "?"
+        },
+        "fourth": {
+          "name": "П Гроші та кредит",
+          "time": "3",
+          "teacher": "доц. Коптюх О.Г",
+          "color": "yellow",
+          "cab": "416"
+        }
+      }
+    },
+    "second_week": {
+      "Monday": {
+        "first": {
+          "name": "Л Комп мережі",
+          "time": "1",
+          "teacher": "Агутін М.М.",
+          "color": "white",
+          "cab": "420"
+        },
+        "second": {
+          "name": "П Теорія прийняття рішень",
+          "time": "2",
+          "teacher": "доц. Катунiна О.С",
+          "color": "white",
+          "cab": "423"
+        },
+        "third": {
+          "name": "П Комп мережі",
+          "time": "3",
+          "teacher": "Агутін М.М.",
+          "color": "white",
+          "cab": "к.ц."
+        }
+      },
+      "Tuesday": {
+        "first": {
+          "name": "П Бухгалтерський облік",
+          "time": "2",
+          "teacher": "доц. Череднiченко Т.В",
+          "color": "pink",
+          "cab": "416"
+        },
+        "second": {
+          "name": "П Бухгалтерський облік",
+          "time": "3",
+          "teacher": "доц. Череднiченко Т.В",
+          "color": "pink",
+          "cab": "?"
+        },
+        "third": {
+          "name": "Л Гроші та кредит",
+          "time": "2",
+          "teacher": "доц. Коптюх О.Г",
+          "color": "yellow",
+          "cab": "?"
+        },
+        "fourth": {
+          "name": "П Гроші та кредит",
+          "time": "3",
+          "teacher": "доц. Коптюх О.Г",
+          "color": "yellow",
+          "cab": "416"
         }
       }
     }
