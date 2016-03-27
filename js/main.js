@@ -33,7 +33,7 @@ $(document).ready(function () {
   day = "saturday";
   break;
 } $.getJSON('js/data.json', function (data) {
-  if (data.timing[first_week][day] == undefined){
+  if (data.timing[first_week].[day] == undefined){
     console.log('VUHODNOY');
   }
   else{
