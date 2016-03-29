@@ -13,7 +13,7 @@ $(document).ready(function () {
  var day
  switch (new Date().getDay()) {
   case 0:
-  day = "monday";// sunday
+  day = "sunday";
   break;
   case 1:
   day = "monday";
@@ -35,27 +35,41 @@ $(document).ready(function () {
   break;
 } 
 
-function refresh(){
+
 $.getJSON('js/data.json', function (data) {
-  if (data.timing[currentWeek][day] == undefined){
-    $(".row").append("<div class=\"col-xs-12 item\"><h1>Неужели выходной ??</h1></div>");
-   
-  }
-  else{
-   var timing = data.timing[currentWeek][day].map(function (item) {
-    $(".row").append("<div class=\"col-xs-12 item "+item.color+"\"><div class=\"col-xs-3 side\"><h5>"+item.time+"</h5></div><div class=\"col-xs-6\"><h5>"+item.name+"</h5><h6>"+item.teacher+"</h6></div><div class=\"col-xs-3 side\"><h5>"+item.cab+"</h5></div>");
-    
-  });
+
+  function refresh(){
+    if (data.timing[currentWeek][day] == undefined){
+      $(".timing").append("<div class=\"col-xs-12 item\"><h1>Неужели выходной ??</h1></div>");
+
+    }
+    else{
+     var timing = data.timing[currentWeek][day].map(function (item) {
+      $(".timing").append("<div style=\"background-color:"+item.color+"\" class=\"col-xs-12 item \"><div class=\"col-xs-3 side\"><h5>"+item.time+"</h5></div><div class=\"col-xs-6\"><h5>"+item.name+"</h5><h6>"+item.teacher+"</h6></div><div class=\"col-xs-3 side\"><h5>"+item.cab+"</h5></div>");
+    });
+   }
  }
- 
+ refresh ();
+ $('.nav li a').click(function setDat(){
+  var a = this;
+  $('.active').removeClass('active');
+  day = this.text.toLowerCase();
+  $(this).parent().addClass('active');
+  $('.timing').empty();
+  if ($(a).hasClass("first")){
+    currentWeek = 'first_week';
+    refresh();
+  }
+  else if($(a).hasClass("timelist")){
+    data.timing.time_list.map(function (item) {
+      $(".timing").append("<div class=\"col-xs-12 item \"><div class=\"col-xs-6 side\"><h5>"+item.name+"</h5></div><div class=\"col-xs-6\"><h5>"+item.time+"</h5></div></div>");
+    });
+  }
+  else if ($(a).hasClass("second")){
+    currentWeek = 'second_week';
+    refresh();
+  }
+  return false
 });
-}
-$('.refresh').click(function setDat(){
-  day = 'tuesday'
-  $('.row').empty();
-  refresh();
-  
-  
 });
-refresh();
 });

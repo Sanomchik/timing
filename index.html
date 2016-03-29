@@ -11,12 +11,39 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-	<div class="refresh"></div>
-	
-</header>
+	<header>
+		<!-- Static navbar -->
+		<nav class="navbar navbar-default">
+			<div class="container nav-container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#" class="first">Monday</a></li>
+						<li><a href="#" class="first">Tuesday</a></li>
+						<li><a href="#" class="first">Wednesday</a></li>
+						<li><a href="#" class="first">Thursday</a></li>
+						<li><a href="#" class="first">Friday</a></li>
+						<li class="divider"></li>
+						<li><a href="#" class="second">Monday</a></li>
+						<li><a href="#" class="second">Tuesday</a></li>
+						<li><a href="#" class="second">Wednesday</a></li>
+						<li><a href="#" class="second">Thursday</a></li>
+						<li><a href="#" class="second">Friday</a></li>
+						<li class="divider"></li>
+						<li><a href="#" class="timelist">Time list</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</nav>
+	</header>
 	<div class="container">
-		<div class="row"></div>
+		<div class="row timing"></div>
 	</div>
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
