@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  $('.nav a').on('click', function(){
+    $('.btn-navbar').click(); 
+    $('.navbar-toggle').click() 
+  });
   var year = new Date().getFullYear(); 
   var month = new Date().getMonth(); 
   var today = new Date(year, month, 0).getTime(); 
