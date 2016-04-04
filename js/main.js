@@ -9,7 +9,7 @@ $(document).ready(function () {
   var now = new Date().getTime(); 
   var week = Math.round((now - today) / (1000 * 60 * 60 * 24 * 7)); 
   var currentWeek;
-  if (week+1 % 2) { 
+  if (week % 2) { 
    currentWeek = 'first_week';
  } else { 
    currentWeek = 'second_week';
