@@ -60,11 +60,12 @@ $.getJSON('js/data.json', function (data) {
   day = this.text.toLowerCase();
   $(this).parent().addClass('active');
   $('.timing').empty();
-  if ($(a).hasClass("first")){
+  /*if ($(a).hasClass("first")){
     currentWeek = 'first_week';
     refresh();
   }
-  else if($(a).hasClass("timelist")){
+  else */
+    if($(a).hasClass("timelist")){
     data.timing.time_list.map(function (item) {
       $(".timing").append("<div class=\"col-xs-12 item \"><div class=\"col-xs-6 side\"><h5>"+item.name+"</h5></div><div class=\"col-xs-6\"><h5>"+item.time+"</h5></div></div>");
     });
