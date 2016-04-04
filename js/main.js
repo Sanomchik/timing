@@ -8,7 +8,7 @@ $(document).ready(function () {
   var today = new Date(year, month, 0).getTime(); 
   var now = new Date().getTime(); 
   var week = Math.round((now - today) / (1000 * 60 * 60 * 24 * 7)); 
-  var currentWeek = 'first_week';
+  var currentWeek = 'second_week';
   /*if (week+1 % 2) { 
    currentWeek = 'first_week';
  } else { 
